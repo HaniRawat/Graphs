@@ -37,9 +37,9 @@ class Solution
             }
         }
         
-        vector<int> visited(V, 0); // to store the visited nodes of            // actual adj list.
+        vector<int> visited(V, 0); // to store the visited nodes of actual adj list.
 
-        // count1 for components of actual adj list and count2              // for components of update list.
+        // count1 for components of actual adj list and count2 for components of update list.
 
         int count1 = 0, count2 = 0;
         for(int i = 0; i < V; i++)
@@ -60,7 +60,7 @@ class Solution
             }
         }
 
-        // if components of update are more than components             // of  adj then it means that c-d edge was bridge and it             // divided the graph in two components.
+        // if components of update are more than components of  adj then it means that c-d edge was bridge and it divided the graph in two components.
         return (count1 < count2);
         
     }
